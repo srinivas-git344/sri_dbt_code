@@ -3,4 +3,4 @@
     incremental_strategy="append") 
     }}
 
- select * from {{source('datafeed_shared_schema','stg_orders_data')}}
+ select * from {{source('datafeed_shared_schema','stg_orders_data')}} where id in(2)

@@ -1,7 +1,6 @@
 {{ config(
     materialized="incremental",
-    unique_key='id',
-    incremental_strategy="delete+insert"
+    incremental_strategy="insert_overwrite"
     ) 
     }}
 
