@@ -7,3 +7,7 @@ sources:
       - name: stg_customer_data
       - name: stg_payments
       - name: stg_orders_data
+      - name: stg_product_data
+      - name: stg_stores_data
+      - name: stg_items_data
+      - name: stg_supllies_data
