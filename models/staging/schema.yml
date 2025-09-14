@@ -11,3 +11,4 @@ sources:
       - name: stg_stores_data
       - name: stg_items_data
       - name: stg_supllies_data
+      - name: emp1
