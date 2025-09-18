@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+  - name: customer_data
+    database: snow_db                # 👈 replace with your Snowflake database
+    schema: cust        # 👈 replace with your Snowflake schema
+    tables:
+      - name: customers_external
+        external:
+          location: "@snowflake_stage_2025"
+          file_format: "snow_db.cust.csv_format_latest1"
+
+          row_format: delimited
+          delimiter: ","
+          skip_header: 1
+          columns:
+            - name: index
+              data_type: string
+            - name: customer_id
+              data_type: string
+            - name: first_name
+              data_type: string
+            - name: last_name
+              data_type: string
+            - name: company 
+              data_type: string
+            - name: city
+              data_type: string
+            - name: country
+              data_type: string
+            - name: phone_1
+              data_type: string
+            - name: phone_2
+              data_type: string
+            - name: email
+              data_type: string
+            - name: subscription_date
+              data_type: string
+            - name: website
+              data_type: string

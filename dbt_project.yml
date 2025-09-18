@@ -42,5 +42,6 @@ models:
       +materialized: table
     staging:
       +materialized: table
-    snapshots:
-      +target_schema: snapshots  
+vars:
+  external_root_path: "@my_dbt_project.my_ext_stage"
+  file_format_name: "snow_db.cust.csv_format_latest"
