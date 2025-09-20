@@ -5,9 +5,9 @@ sources:
     database: snow_db                # 👈 replace with your Snowflake database
     schema: cust        # 👈 replace with your Snowflake schema
     tables:
-      - name: customers_external
+      - name: customers_external1
         external:
-          location: "@snowflake_stage_2025"
+          location: "@snow_db.cust.snowflake_stage_2025"
           file_format: "snow_db.cust.csv_format_latest1"
 
           row_format: delimited
@@ -15,26 +15,26 @@ sources:
           skip_header: 1
           columns:
             - name: index
-              data_type: string
+              data_type: varchar
             - name: customer_id
-              data_type: string
+              data_type: varchar
             - name: first_name
-              data_type: string
+              data_type: varchar
             - name: last_name
-              data_type: string
+              data_type: varchar
             - name: company 
-              data_type: string
+              data_type: varchar
             - name: city
-              data_type: string
+              data_type: varchar
             - name: country
-              data_type: string
+              data_type: varchar
             - name: phone_1
-              data_type: string
+              data_type: varchar
             - name: phone_2
-              data_type: string
+              data_type: varchar
             - name: email
-              data_type: string
+              data_type: varchar
             - name: subscription_date
-              data_type: string
+              data_type: varchar
             - name: website
-              data_type: string
+              data_type: varchar
