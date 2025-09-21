@@ -16,25 +16,37 @@ sources:
           columns:
             - name: index
               data_type: varchar
+              external_expression: "VALUE:c1::VARCHAR"
             - name: customer_id
               data_type: varchar
+              external_expression: "VALUE:c2::VARCHAR"
             - name: first_name
               data_type: varchar
+              external_expression: "VALUE:c3::VARCHAR"
             - name: last_name
               data_type: varchar
+              external_expression: "VALUE:c4::VARCHAR"
             - name: company 
               data_type: varchar
+              external_expression: "VALUE:c5::VARCHAR"
             - name: city
               data_type: varchar
+              external_expression: "VALUE:c6::VARCHAR"
             - name: country
               data_type: varchar
+              external_expression: "VALUE:c7::VARCHAR"
             - name: phone_1
               data_type: varchar
+              external_expression: "VALUE:c8::VARCHAR"
             - name: phone_2
               data_type: varchar
+              external_expression: "VALUE:c9::VARCHAR"
             - name: email
               data_type: varchar
+              external_expression: "VALUE:c10::VARCHAR"
             - name: subscription_date
               data_type: varchar
+              external_expression: "VALUE:c11::VARCHAR"
             - name: website
               data_type: varchar
+              external_expression: "VALUE:c12::VARCHAR"

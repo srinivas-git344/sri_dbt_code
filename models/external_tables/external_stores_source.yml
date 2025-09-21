@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: rawstores
+    database: snow_db                # 👈 replace with your Snowflake database
+    schema: cust 
+    tables:
+      - name: stores_external
+        external:
+          location: "@snow_db.cust.snowflake_stage_2025_11"
+          file_format: snow_db.cust.csv_format_latest_stores
+          pattern: '.*stores.*\.csv'  # optional: match your file name
+          columns:
+            - name: id
+              data_type: number
+            - name: name
+              data_type: varchar
+            - name: opened_at
+              data_type: date
+            - name: tax_rate
+              data_type: float
